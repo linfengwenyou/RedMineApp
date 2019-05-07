@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B36BBF77227FCAEC0003E3C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBF76227FCAEC0003E3C4 /* AppDelegate.swift */; };
+		B36BBF79227FCAEC0003E3C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBF78227FCAEC0003E3C4 /* ViewController.swift */; };
+		B36BBF7B227FCAED0003E3C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36BBF7A227FCAED0003E3C4 /* Assets.xcassets */; };
+		B36BBF7E227FCAED0003E3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36BBF7C227FCAED0003E3C4 /* Main.storyboard */; };
+		B36BBF8A227FCAED0003E3C4 /* RedMineProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBF89227FCAED0003E3C4 /* RedMineProjectTests.swift */; };
+		B36BBF95227FCAED0003E3C4 /* RedMineProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBF94227FCAED0003E3C4 /* RedMineProjectUITests.swift */; };
+		B36BBFA7227FD96A0003E3C4 /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBFA6227FD96A0003E3C4 /* NetManager.swift */; };
+		B36BBFA9227FEB9F0003E3C4 /* FilterTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBFA8227FEB9F0003E3C4 /* FilterTool.swift */; };
+		B36BBFAB227FF8750003E3C4 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BBFAA227FF8750003E3C4 /* LoginManager.swift */; };
+		B39C2F3822812D6100826B8C /* BugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F3722812D6100826B8C /* BugModel.swift */; };
+		B39C2F3A2281344400826B8C /* BugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F392281344400826B8C /* BugManager.swift */; };
+		B39C2F4122817F0B00826B8C /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F4022817F0B00826B8C /* EventMonitor.swift */; };
+		B80B0ADDF38B8533C93CA1D1 /* Pods_RedMineProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5C069F061AF7B0C9E4BC45 /* Pods_RedMineProject.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B36BBF86227FCAED0003E3C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B36BBF6B227FCAEC0003E3C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36BBF72227FCAEC0003E3C4;
+			remoteInfo = RedMineProject;
+		};
+		B36BBF91227FCAED0003E3C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B36BBF6B227FCAEC0003E3C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B36BBF72227FCAEC0003E3C4;
+			remoteInfo = RedMineProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D5C069F061AF7B0C9E4BC45 /* Pods_RedMineProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedMineProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D88210437384139FA380E3B /* Pods-RedMineProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMineProject.debug.xcconfig"; path = "Target Support Files/Pods-RedMineProject/Pods-RedMineProject.debug.xcconfig"; sourceTree = "<group>"; };
+		556E3317DA8B2FF9EBDCDBC8 /* Pods_RedMineProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedMineProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36BBF73227FCAEC0003E3C4 /* RedMineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedMineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36BBF76227FCAEC0003E3C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B36BBF78227FCAEC0003E3C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B36BBF7A227FCAED0003E3C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B36BBF7D227FCAED0003E3C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B36BBF7F227FCAED0003E3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36BBF80227FCAED0003E3C4 /* RedMineProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RedMineProject.entitlements; sourceTree = "<group>"; };
+		B36BBF85227FCAED0003E3C4 /* RedMineProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedMineProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36BBF89227FCAED0003E3C4 /* RedMineProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedMineProjectTests.swift; sourceTree = "<group>"; };
+		B36BBF8B227FCAED0003E3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36BBF90227FCAED0003E3C4 /* RedMineProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedMineProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36BBF94227FCAED0003E3C4 /* RedMineProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedMineProjectUITests.swift; sourceTree = "<group>"; };
+		B36BBF96227FCAED0003E3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36BBFA6227FD96A0003E3C4 /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
+		B36BBFA8227FEB9F0003E3C4 /* FilterTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTool.swift; sourceTree = "<group>"; };
+		B36BBFAA227FF8750003E3C4 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		B39C2F3722812D6100826B8C /* BugModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugModel.swift; sourceTree = "<group>"; };
+		B39C2F392281344400826B8C /* BugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugManager.swift; sourceTree = "<group>"; };
+		B39C2F4022817F0B00826B8C /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		D7449FE45F008E0A353114B4 /* Pods-RedMineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMineProject.release.xcconfig"; path = "Target Support Files/Pods-RedMineProject/Pods-RedMineProject.release.xcconfig"; sourceTree = "<group>"; };
+		DA293726C29820FECCAA286F /* Pods_RedMineProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedMineProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B36BBF70227FCAEC0003E3C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80B0ADDF38B8533C93CA1D1 /* Pods_RedMineProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36BBF82227FCAED0003E3C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36BBF8D227FCAED0003E3C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F5B67CBAD245A7A0D356C88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D5C069F061AF7B0C9E4BC45 /* Pods_RedMineProject.framework */,
+				DA293726C29820FECCAA286F /* Pods_RedMineProjectTests.framework */,
+				556E3317DA8B2FF9EBDCDBC8 /* Pods_RedMineProjectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B36BBF6A227FCAEC0003E3C4 = {
+			isa = PBXGroup;
+			children = (
+				B36BBF75227FCAEC0003E3C4 /* RedMineProject */,
+				B36BBF88227FCAED0003E3C4 /* RedMineProjectTests */,
+				B36BBF93227FCAED0003E3C4 /* RedMineProjectUITests */,
+				B36BBF74227FCAEC0003E3C4 /* Products */,
+				C0C35BD316904856D5400C11 /* Pods */,
+				5F5B67CBAD245A7A0D356C88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B36BBF74227FCAEC0003E3C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B36BBF73227FCAEC0003E3C4 /* RedMineProject.app */,
+				B36BBF85227FCAED0003E3C4 /* RedMineProjectTests.xctest */,
+				B36BBF90227FCAED0003E3C4 /* RedMineProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B36BBF75227FCAEC0003E3C4 /* RedMineProject */ = {
+			isa = PBXGroup;
+			children = (
+				B39C2F3F22817EFD00826B8C /* Monitor */,
+				B39C2F3622812D5600826B8C /* Model */,
+				B39C2F3522812D4900826B8C /* Manager */,
+				B39C2F3422812D3800826B8C /* Tool */,
+				B39C2F3322812D2D00826B8C /* Net */,
+				B36BBF76227FCAEC0003E3C4 /* AppDelegate.swift */,
+				B36BBF78227FCAEC0003E3C4 /* ViewController.swift */,
+				B36BBF7A227FCAED0003E3C4 /* Assets.xcassets */,
+				B36BBF7C227FCAED0003E3C4 /* Main.storyboard */,
+				B36BBF7F227FCAED0003E3C4 /* Info.plist */,
+				B36BBF80227FCAED0003E3C4 /* RedMineProject.entitlements */,
+			);
+			path = RedMineProject;
+			sourceTree = "<group>";
+		};
+		B36BBF88227FCAED0003E3C4 /* RedMineProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				B36BBF89227FCAED0003E3C4 /* RedMineProjectTests.swift */,
+				B36BBF8B227FCAED0003E3C4 /* Info.plist */,
+			);
+			path = RedMineProjectTests;
+			sourceTree = "<group>";
+		};
+		B36BBF93227FCAED0003E3C4 /* RedMineProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B36BBF94227FCAED0003E3C4 /* RedMineProjectUITests.swift */,
+				B36BBF96227FCAED0003E3C4 /* Info.plist */,
+			);
+			path = RedMineProjectUITests;
+			sourceTree = "<group>";
+		};
+		B39C2F3322812D2D00826B8C /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				B36BBFA6227FD96A0003E3C4 /* NetManager.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		B39C2F3422812D3800826B8C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B36BBFA8227FEB9F0003E3C4 /* FilterTool.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B39C2F3522812D4900826B8C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B36BBFAA227FF8750003E3C4 /* LoginManager.swift */,
+				B39C2F392281344400826B8C /* BugManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B39C2F3622812D5600826B8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B39C2F3722812D6100826B8C /* BugModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B39C2F3F22817EFD00826B8C /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				B39C2F4022817F0B00826B8C /* EventMonitor.swift */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		C0C35BD316904856D5400C11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D88210437384139FA380E3B /* Pods-RedMineProject.debug.xcconfig */,
+				D7449FE45F008E0A353114B4 /* Pods-RedMineProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B36BBF72227FCAEC0003E3C4 /* RedMineProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B36BBF99227FCAED0003E3C4 /* Build configuration list for PBXNativeTarget "RedMineProject" */;
+			buildPhases = (
+				6E8013C5A44CF5644033F756 /* [CP] Check Pods Manifest.lock */,
+				B36BBF6F227FCAEC0003E3C4 /* Sources */,
+				B36BBF70227FCAEC0003E3C4 /* Frameworks */,
+				B36BBF71227FCAEC0003E3C4 /* Resources */,
+				7E62610DC2FF3008BD4FD8BF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedMineProject;
+			productName = RedMineProject;
+			productReference = B36BBF73227FCAEC0003E3C4 /* RedMineProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B36BBF84227FCAED0003E3C4 /* RedMineProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B36BBF9C227FCAED0003E3C4 /* Build configuration list for PBXNativeTarget "RedMineProjectTests" */;
+			buildPhases = (
+				B36BBF81227FCAED0003E3C4 /* Sources */,
+				B36BBF82227FCAED0003E3C4 /* Frameworks */,
+				B36BBF83227FCAED0003E3C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B36BBF87227FCAED0003E3C4 /* PBXTargetDependency */,
+			);
+			name = RedMineProjectTests;
+			productName = RedMineProjectTests;
+			productReference = B36BBF85227FCAED0003E3C4 /* RedMineProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B36BBF8F227FCAED0003E3C4 /* RedMineProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B36BBF9F227FCAED0003E3C4 /* Build configuration list for PBXNativeTarget "RedMineProjectUITests" */;
+			buildPhases = (
+				B36BBF8C227FCAED0003E3C4 /* Sources */,
+				B36BBF8D227FCAED0003E3C4 /* Frameworks */,
+				B36BBF8E227FCAED0003E3C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B36BBF92227FCAED0003E3C4 /* PBXTargetDependency */,
+			);
+			name = RedMineProjectUITests;
+			productName = RedMineProjectUITests;
+			productReference = B36BBF90227FCAED0003E3C4 /* RedMineProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B36BBF6B227FCAEC0003E3C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = rayor;
+				TargetAttributes = {
+					B36BBF72227FCAEC0003E3C4 = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					B36BBF84227FCAED0003E3C4 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = B36BBF72227FCAEC0003E3C4;
+					};
+					B36BBF8F227FCAED0003E3C4 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = B36BBF72227FCAEC0003E3C4;
+					};
+				};
+			};
+			buildConfigurationList = B36BBF6E227FCAEC0003E3C4 /* Build configuration list for PBXProject "RedMineProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B36BBF6A227FCAEC0003E3C4;
+			productRefGroup = B36BBF74227FCAEC0003E3C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B36BBF72227FCAEC0003E3C4 /* RedMineProject */,
+				B36BBF84227FCAED0003E3C4 /* RedMineProjectTests */,
+				B36BBF8F227FCAED0003E3C4 /* RedMineProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B36BBF71227FCAEC0003E3C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36BBF7B227FCAED0003E3C4 /* Assets.xcassets in Resources */,
+				B36BBF7E227FCAED0003E3C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36BBF83227FCAED0003E3C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36BBF8E227FCAED0003E3C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E8013C5A44CF5644033F756 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RedMineProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E62610DC2FF3008BD4FD8BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedMineProject/Pods-RedMineProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RedMineProject/Pods-RedMineProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B36BBF6F227FCAEC0003E3C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36BBFAB227FF8750003E3C4 /* LoginManager.swift in Sources */,
+				B39C2F3A2281344400826B8C /* BugManager.swift in Sources */,
+				B36BBFA7227FD96A0003E3C4 /* NetManager.swift in Sources */,
+				B39C2F3822812D6100826B8C /* BugModel.swift in Sources */,
+				B36BBF79227FCAEC0003E3C4 /* ViewController.swift in Sources */,
+				B36BBF77227FCAEC0003E3C4 /* AppDelegate.swift in Sources */,
+				B36BBFA9227FEB9F0003E3C4 /* FilterTool.swift in Sources */,
+				B39C2F4122817F0B00826B8C /* EventMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36BBF81227FCAED0003E3C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36BBF8A227FCAED0003E3C4 /* RedMineProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36BBF8C227FCAED0003E3C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B36BBF95227FCAED0003E3C4 /* RedMineProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B36BBF87227FCAED0003E3C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B36BBF72227FCAEC0003E3C4 /* RedMineProject */;
+			targetProxy = B36BBF86227FCAED0003E3C4 /* PBXContainerItemProxy */;
+		};
+		B36BBF92227FCAED0003E3C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B36BBF72227FCAEC0003E3C4 /* RedMineProject */;
+			targetProxy = B36BBF91227FCAED0003E3C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B36BBF7C227FCAED0003E3C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B36BBF7D227FCAED0003E3C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B36BBF97227FCAED0003E3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B36BBF98227FCAED0003E3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B36BBF9A227FCAED0003E3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D88210437384139FA380E3B /* Pods-RedMineProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C8Z9C7T6GY;
+				INFOPLIST_FILE = RedMineProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.song.RedMineProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		B36BBF9B227FCAED0003E3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7449FE45F008E0A353114B4 /* Pods-RedMineProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C8Z9C7T6GY;
+				INFOPLIST_FILE = RedMineProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.song.RedMineProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		B36BBF9D227FCAED0003E3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C8Z9C7T6GY;
+				INFOPLIST_FILE = RedMineProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.song.RedMineProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedMineProject.app/Contents/MacOS/RedMineProject";
+			};
+			name = Debug;
+		};
+		B36BBF9E227FCAED0003E3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C8Z9C7T6GY;
+				INFOPLIST_FILE = RedMineProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.song.RedMineProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedMineProject.app/Contents/MacOS/RedMineProject";
+			};
+			name = Release;
+		};
+		B36BBFA0227FCAED0003E3C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C8Z9C7T6GY;
+				INFOPLIST_FILE = RedMineProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.song.RedMineProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RedMineProject;
+			};
+			name = Debug;
+		};
+		B36BBFA1227FCAED0003E3C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C8Z9C7T6GY;
+				INFOPLIST_FILE = RedMineProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.song.RedMineProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = RedMineProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B36BBF6E227FCAEC0003E3C4 /* Build configuration list for PBXProject "RedMineProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36BBF97227FCAED0003E3C4 /* Debug */,
+				B36BBF98227FCAED0003E3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B36BBF99227FCAED0003E3C4 /* Build configuration list for PBXNativeTarget "RedMineProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36BBF9A227FCAED0003E3C4 /* Debug */,
+				B36BBF9B227FCAED0003E3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B36BBF9C227FCAED0003E3C4 /* Build configuration list for PBXNativeTarget "RedMineProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36BBF9D227FCAED0003E3C4 /* Debug */,
+				B36BBF9E227FCAED0003E3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B36BBF9F227FCAED0003E3C4 /* Build configuration list for PBXNativeTarget "RedMineProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B36BBFA0227FCAED0003E3C4 /* Debug */,
+				B36BBFA1227FCAED0003E3C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B36BBF6B227FCAEC0003E3C4 /* Project object */;
+}

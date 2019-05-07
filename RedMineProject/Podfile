@@ -1,0 +1,8 @@
+# Uncomment the next line to define a global platform for your project
+platform :osx, '10.14'
+
+target 'RedMineProject' do
+  use_frameworks!
+  pod 'Alamofire'
+ 
+end
