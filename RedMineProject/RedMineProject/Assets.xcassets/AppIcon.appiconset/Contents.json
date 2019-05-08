@@ -3,61 +3,56 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-10.png",
+      "filename" : "bug-4.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-9.png",
+      "filename" : "bug-3.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-8.png",
+      "filename" : "bug-2.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-7.png",
+      "filename" : "bug-1.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-6.png",
+      "filename" : "bug.png",
       "scale" : "1x"
     },
     {
+      "idiom" : "mac",
       "size" : "128x128",
-      "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-5.png",
       "scale" : "2x"
     },
     {
-      "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-4.png",
+      "size" : "256x256",
       "scale" : "1x"
     },
     {
-      "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-3.png",
+      "size" : "256x256",
       "scale" : "2x"
     },
     {
-      "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-2.png",
+      "size" : "512x512",
       "scale" : "1x"
     },
     {
-      "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "方舟logo-2-store_1024pt-1.png",
+      "size" : "512x512",
       "scale" : "2x"
     }
   ],

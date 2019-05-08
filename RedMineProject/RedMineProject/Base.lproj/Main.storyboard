@@ -243,17 +243,32 @@
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
                             </secureTextField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aN0-N1-jXr">
+                                <rect key="frame" x="374" y="3" width="112" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hbK-aa-nSh"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="退出App" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qnX-e4-h5g">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="exitAction:" target="Nbh-E3-fSg" id="mxW-Y9-ekF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="LeI-I8-VM2" firstAttribute="height" secondItem="cDq-ID-oQf" secondAttribute="height" id="0zZ-lv-d6q"/>
                             <constraint firstItem="LeI-I8-VM2" firstAttribute="centerY" secondItem="XOn-hX-BsA" secondAttribute="centerY" id="71p-Nb-nzQ"/>
                             <constraint firstItem="cDq-ID-oQf" firstAttribute="centerX" secondItem="XOn-hX-BsA" secondAttribute="centerX" id="9nt-LL-Xaz"/>
+                            <constraint firstAttribute="bottom" secondItem="aN0-N1-jXr" secondAttribute="bottom" constant="10" id="E5y-Ad-lnL"/>
                             <constraint firstItem="LeI-I8-VM2" firstAttribute="top" secondItem="cDq-ID-oQf" secondAttribute="bottom" constant="20" id="J3e-fn-gSn"/>
                             <constraint firstItem="iV0-Lt-aUs" firstAttribute="leading" secondItem="LeI-I8-VM2" secondAttribute="trailing" constant="10" id="JF4-3d-ELc"/>
                             <constraint firstItem="b8W-Hk-BPu" firstAttribute="top" secondItem="LeI-I8-VM2" secondAttribute="bottom" constant="20" id="Lw8-66-7n8"/>
                             <constraint firstItem="b8W-Hk-BPu" firstAttribute="centerX" secondItem="XOn-hX-BsA" secondAttribute="centerX" id="Wcb-ps-5aA"/>
                             <constraint firstItem="LeI-I8-VM2" firstAttribute="centerX" secondItem="XOn-hX-BsA" secondAttribute="centerX" id="oH4-GV-HIT"/>
                             <constraint firstItem="LeI-I8-VM2" firstAttribute="width" secondItem="cDq-ID-oQf" secondAttribute="width" id="ovr-ms-ieT"/>
+                            <constraint firstAttribute="trailing" secondItem="aN0-N1-jXr" secondAttribute="trailing" id="qZn-Cb-BCd"/>
                             <constraint firstItem="iV0-Lt-aUs" firstAttribute="centerY" secondItem="LeI-I8-VM2" secondAttribute="centerY" id="uEZ-8R-NxO"/>
                         </constraints>
                     </view>

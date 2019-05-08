@@ -58,6 +58,12 @@ class LoginController: BaseViewController {
         
     }
     
+    
+    @IBAction func exitAction(_ sender: Any) {
+        exit(0)
+    }
+    
+    
 }
 
 
