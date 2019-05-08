@@ -98,22 +98,22 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--BugListController-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="RedMineProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" userLabel="BugListController" customClass="ViewController" customModule="RedMineProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQD-cX-9eU">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="30" width="480" height="240"/>
                                 <clipView key="contentView" id="WrN-Cc-Znx">
-                                    <rect key="frame" x="1" y="0.0" width="478" height="269"/>
+                                    <rect key="frame" x="1" y="0.0" width="478" height="239"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="VMn-K4-hFJ" id="cPq-rL-aMZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="244"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="214"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -162,11 +162,27 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YeB-hY-E2z">
+                                <rect key="frame" x="374" y="-7" width="112" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="j8d-Ie-Utt"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="退出App" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kOD-lI-udb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quitAppAction:" target="XfG-lQ-9wD" id="krv-P6-qNO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="gQD-cX-9eU" secondAttribute="bottom" id="7cK-dI-FjU"/>
+                            <constraint firstAttribute="bottom" secondItem="gQD-cX-9eU" secondAttribute="bottom" constant="30" id="7cK-dI-FjU"/>
+                            <constraint firstAttribute="trailing" secondItem="YeB-hY-E2z" secondAttribute="trailing" id="MjU-Ak-WQB"/>
+                            <constraint firstItem="YeB-hY-E2z" firstAttribute="top" secondItem="gQD-cX-9eU" secondAttribute="bottom" id="PgG-K1-2wf"/>
                             <constraint firstAttribute="trailing" secondItem="gQD-cX-9eU" secondAttribute="trailing" id="QmS-TJ-cFR"/>
                             <constraint firstItem="gQD-cX-9eU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="S4f-qZ-FFt"/>
+                            <constraint firstAttribute="bottom" secondItem="YeB-hY-E2z" secondAttribute="bottom" id="cnR-wL-xRp"/>
                             <constraint firstItem="gQD-cX-9eU" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="kUo-wt-R9r"/>
                         </constraints>
                     </view>
@@ -176,7 +192,80 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="259"/>
+            <point key="canvasLocation" x="161" y="198"/>
+        </scene>
+        <!--LoginController-->
+        <scene sceneID="VRx-Ix-48t">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="Nbh-E3-fSg" userLabel="LoginController" customClass="LoginController" customModule="RedMineProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="XOn-hX-BsA">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cDq-ID-oQf">
+                                <rect key="frame" x="180" y="181" width="120" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Rww-Er-uE0"/>
+                                    <constraint firstAttribute="width" constant="120" id="i3J-c2-IxZ"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="RedMine账号" drawsBackground="YES" id="bFM-Ip-Up5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iV0-Lt-aUs">
+                                <rect key="frame" x="308" y="145" width="78" height="11"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="用户名或密码错误" id="yMK-jK-kGO">
+                                    <font key="font" metaFont="miniSystem"/>
+                                    <color key="textColor" red="1" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b8W-Hk-BPu">
+                                <rect key="frame" x="207" y="91" width="67" height="32"/>
+                                <buttonCell key="cell" type="push" title="登录" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rbv-76-caj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didClickLoginAction:" target="Nbh-E3-fSg" id="zgg-cW-fjV"/>
+                                </connections>
+                            </button>
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LeI-I8-VM2">
+                                <rect key="frame" x="180" y="139" width="120" height="22"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="密码" drawsBackground="YES" usesSingleLineMode="YES" id="iB6-bO-648">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LeI-I8-VM2" firstAttribute="height" secondItem="cDq-ID-oQf" secondAttribute="height" id="0zZ-lv-d6q"/>
+                            <constraint firstItem="LeI-I8-VM2" firstAttribute="centerY" secondItem="XOn-hX-BsA" secondAttribute="centerY" id="71p-Nb-nzQ"/>
+                            <constraint firstItem="cDq-ID-oQf" firstAttribute="centerX" secondItem="XOn-hX-BsA" secondAttribute="centerX" id="9nt-LL-Xaz"/>
+                            <constraint firstItem="LeI-I8-VM2" firstAttribute="top" secondItem="cDq-ID-oQf" secondAttribute="bottom" constant="20" id="J3e-fn-gSn"/>
+                            <constraint firstItem="iV0-Lt-aUs" firstAttribute="leading" secondItem="LeI-I8-VM2" secondAttribute="trailing" constant="10" id="JF4-3d-ELc"/>
+                            <constraint firstItem="b8W-Hk-BPu" firstAttribute="top" secondItem="LeI-I8-VM2" secondAttribute="bottom" constant="20" id="Lw8-66-7n8"/>
+                            <constraint firstItem="b8W-Hk-BPu" firstAttribute="centerX" secondItem="XOn-hX-BsA" secondAttribute="centerX" id="Wcb-ps-5aA"/>
+                            <constraint firstItem="LeI-I8-VM2" firstAttribute="centerX" secondItem="XOn-hX-BsA" secondAttribute="centerX" id="oH4-GV-HIT"/>
+                            <constraint firstItem="LeI-I8-VM2" firstAttribute="width" secondItem="cDq-ID-oQf" secondAttribute="width" id="ovr-ms-ieT"/>
+                            <constraint firstItem="iV0-Lt-aUs" firstAttribute="centerY" secondItem="LeI-I8-VM2" secondAttribute="centerY" id="uEZ-8R-NxO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passField" destination="LeI-I8-VM2" id="pq6-fU-KYn"/>
+                        <outlet property="statuLabel" destination="iV0-Lt-aUs" id="lgY-zE-t8d"/>
+                        <outlet property="userField" destination="cDq-ID-oQf" id="A9V-9n-aPN"/>
+                    </connections>
+                </viewController>
+                <customObject id="5QU-HY-3NE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="562"/>
         </scene>
     </scenes>
 </document>

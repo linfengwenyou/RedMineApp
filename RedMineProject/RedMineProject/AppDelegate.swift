@@ -24,13 +24,19 @@ class AppDelegate: NSObject, NSApplicationDelegate,UNUserNotificationCenterDeleg
         self.configureNotification()
         self.configureStatuBar()
         
-        popover.contentViewController = ViewController.MainViewController()
+//        if let mainVC = ViewController.loadViewController("MainViewController") as? ViewController {
+//            popover.contentViewController = mainVC
+//        }
+        
+        if let loginVC = LoginController.loadViewController("loginVC") as? LoginController {
+            popover.contentViewController = loginVC
+        }
+        
         eventMonitor = EventMonitor(mask: [.leftMouseDown,.rightMouseDown], handler: { [weak self] (event) in
             if let strongSelf = self, strongSelf.popover.isShown {
                 strongSelf.closePopover(sender: event)
             }
         })
-        
         
         // 初次显示出来
         self.showPopover(sender: nil)

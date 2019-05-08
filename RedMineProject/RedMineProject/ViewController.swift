@@ -10,29 +10,16 @@ import Cocoa
 import UserNotifications
 
 
-class ViewController: NSViewController {
+class ViewController: BaseViewController {
 
     @IBOutlet weak var tableView: NSTableView!
     var datasource:[BugModel]?
     
-    static func MainViewController() -> ViewController {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-        let identifier = NSStoryboard.SceneIdentifier("MainViewController")
-        guard let vc = storyboard.instantiateController(withIdentifier: identifier) as? ViewController else {
-            fatalError("construct vc faile")
-        }
-        
-        return vc
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoginManager.preLoginRequest()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
         
         BugManager.shared.updateBugModes = { models in
             DispatchQueue.main.async {
@@ -76,6 +63,12 @@ class ViewController: NSViewController {
         // 使用safair进行打开
         NSWorkspace.shared.open(URL.init(string: url)!)
     }
+    
+    
+    @IBAction func quitAppAction(_ sender: Any) {
+        exit(0)
+    }
+    
 }
 
 

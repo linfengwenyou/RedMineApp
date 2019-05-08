@@ -11,7 +11,7 @@ import Alamofire
 // 登录用户
 class LoginManager {
     /** 预登陆，需要获取登录用到的token */
-    static func preLoginRequest() {
+    static func preLoginRequest(username:String, password:String, completeAction:@escaping ((Bool)->Void)) {
         
         
         let session = URLSession.shared
@@ -25,14 +25,14 @@ class LoginManager {
                 print("获取登录页面失败:\(error.debugDescription)")
                 return
             }
-            //TODO: 通过String来筛选出token位置信息
+            //通过String来筛选出token位置信息
             let string = String.init(data: data!, encoding: .utf8)
             // 需要将此key写入参数中使用
             let key = authenticityTokey(string)
             /** 调取登录接口 */
             
             NetManager.shared.configCookie(response)
-            self.loginAlamofireRequest(key)
+            self.loginAlamofireRequest(key, username: username, password: password, completeAction: completeAction)
         }
         
         task.resume()
@@ -93,14 +93,12 @@ class LoginManager {
  */
     
     /** 登录 */
-    static func loginAlamofireRequest(_ authtoken:String) {
+    static func loginAlamofireRequest(_ authtoken:String, username:String, password:String , completeAction:@escaping ((Bool)->Void)) {
         let param = ["utf8":"✓",
                      "authenticity_token":authtoken,
                      "back_url":APIEnumber.main.rawValue,
-                     "username":"fumi_liusong",
-                     "password":"12345678","login":"登录"]
-        
-        
+                     "username":username,
+                     "password":password,"login":"登录"]
         
         
         // 会话代理
@@ -113,7 +111,7 @@ class LoginManager {
             NetManager.shared.configCookie(response)
             
             // 调用主页面
-            self.requestShowMain()
+            self.requestShowMain(completeAction: completeAction)
             return nil
         }
         
@@ -130,12 +128,19 @@ class LoginManager {
             // 走重定向，不使用配置了
 //            NetManager.shared.configCookie(response.response)
 //            self.showMain()
+            //通过String来筛选出token位置信息
+            let string = String.init(data: response.result.value!, encoding: .utf8)
+            let isInValid = isInValidUserOrPassword(string)
+            if isInValid {  // 如果无效
+                completeAction(false)
+            }
+            
         })
         
     }
     
     /** 主页面 */
-    static func requestShowMain() {
+    static func requestShowMain(completeAction:@escaping ((Bool)->Void)) {
         // 判断是否登录成功
         // 构造网络请求
         let session = URLSession.shared
@@ -155,13 +160,12 @@ class LoginManager {
             NetManager.shared.configCookie(response)
            let isSuccess = isLoginSuccess(string)
             
+        completeAction(isSuccess)   // 登录回调
             // 判断是否登录成功
             if !isSuccess {
                 print("登录失败，请查看代码信息")
                 return
             }
-            
-            BugManager.shared.requestShowMyPage()
         }
         
         task.resume()

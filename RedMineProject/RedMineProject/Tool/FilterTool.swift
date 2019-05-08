@@ -48,6 +48,22 @@ func isLoginSuccess(_ content:String?) -> Bool {
     return true
 }
 
+/** 判断用户登录是否有效 */
+func isInValidUserOrPassword(_ content:String?) -> Bool {
+    guard let content = content else {  // 如果没有配置就直接回退处理
+        return true
+    }
+    
+    let pattern = "无效的用户名或密码"
+    let regular = try? NSRegularExpression.init(pattern: pattern , options: [])
+    
+    guard let results = regular?.matches(in: content, options: .init(rawValue: 0), range: NSMakeRange(0, content.count)) else  {
+        return false
+    }
+    return true
+}
+
+
 /** 获取bug模型 */
 func bugFilterForModelS(_ content:String?) -> [BugModel] {
     var models = [BugModel]()

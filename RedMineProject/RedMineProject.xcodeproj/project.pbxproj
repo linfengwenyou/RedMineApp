@@ -19,6 +19,8 @@
 		B39C2F3822812D6100826B8C /* BugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F3722812D6100826B8C /* BugModel.swift */; };
 		B39C2F3A2281344400826B8C /* BugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F392281344400826B8C /* BugManager.swift */; };
 		B39C2F4122817F0B00826B8C /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F4022817F0B00826B8C /* EventMonitor.swift */; };
+		B39C2F482282644800826B8C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F462282644800826B8C /* BaseViewController.swift */; };
+		B39C2F492282644800826B8C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C2F472282644800826B8C /* LoginController.swift */; };
 		B80B0ADDF38B8533C93CA1D1 /* Pods_RedMineProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5C069F061AF7B0C9E4BC45 /* Pods_RedMineProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		B39C2F3722812D6100826B8C /* BugModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugModel.swift; sourceTree = "<group>"; };
 		B39C2F392281344400826B8C /* BugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugManager.swift; sourceTree = "<group>"; };
 		B39C2F4022817F0B00826B8C /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		B39C2F462282644800826B8C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B39C2F472282644800826B8C /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D7449FE45F008E0A353114B4 /* Pods-RedMineProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMineProject.release.xcconfig"; path = "Target Support Files/Pods-RedMineProject/Pods-RedMineProject.release.xcconfig"; sourceTree = "<group>"; };
 		DA293726C29820FECCAA286F /* Pods_RedMineProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedMineProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 		B36BBF75227FCAEC0003E3C4 /* RedMineProject */ = {
 			isa = PBXGroup;
 			children = (
+				B39C2F4A228267AC00826B8C /* Base */,
 				B39C2F3F22817EFD00826B8C /* Monitor */,
 				B39C2F3622812D5600826B8C /* Model */,
 				B39C2F3522812D4900826B8C /* Manager */,
@@ -134,6 +139,7 @@
 				B39C2F3322812D2D00826B8C /* Net */,
 				B36BBF76227FCAEC0003E3C4 /* AppDelegate.swift */,
 				B36BBF78227FCAEC0003E3C4 /* ViewController.swift */,
+				B39C2F472282644800826B8C /* LoginController.swift */,
 				B36BBF7A227FCAED0003E3C4 /* Assets.xcassets */,
 				B36BBF7C227FCAED0003E3C4 /* Main.storyboard */,
 				B36BBF7F227FCAED0003E3C4 /* Info.plist */,
@@ -199,6 +205,14 @@
 				B39C2F4022817F0B00826B8C /* EventMonitor.swift */,
 			);
 			path = Monitor;
+			sourceTree = "<group>";
+		};
+		B39C2F4A228267AC00826B8C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B39C2F462282644800826B8C /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		C0C35BD316904856D5400C11 /* Pods */ = {
@@ -400,9 +414,11 @@
 				B36BBFA7227FD96A0003E3C4 /* NetManager.swift in Sources */,
 				B39C2F3822812D6100826B8C /* BugModel.swift in Sources */,
 				B36BBF79227FCAEC0003E3C4 /* ViewController.swift in Sources */,
+				B39C2F482282644800826B8C /* BaseViewController.swift in Sources */,
 				B36BBF77227FCAEC0003E3C4 /* AppDelegate.swift in Sources */,
 				B36BBFA9227FEB9F0003E3C4 /* FilterTool.swift in Sources */,
 				B39C2F4122817F0B00826B8C /* EventMonitor.swift in Sources */,
+				B39C2F492282644800826B8C /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
