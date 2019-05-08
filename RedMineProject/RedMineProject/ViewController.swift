@@ -23,7 +23,8 @@ class ViewController: BaseViewController {
         
         BugManager.shared.updateBugModes = { models in
             DispatchQueue.main.async {
-                if models.count != (self.datasource?.count ?? 0) , models.count > 0 { // 初次启动给出提示
+                let dataSourceCount = self.datasource?.count ?? 0
+                if models.count != dataSourceCount , models.count > dataSourceCount { // 初次启动给出提示
                     let model = models.first
                     self.showNotification(model: model)
                 }

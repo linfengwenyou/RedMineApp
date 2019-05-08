@@ -60,7 +60,8 @@ func isInValidUserOrPassword(_ content:String?) -> Bool {
     guard let results = regular?.matches(in: content, options: .init(rawValue: 0), range: NSMakeRange(0, content.count)) else  {
         return false
     }
-    return true
+    
+    return results.count > 0
 }
 
 
