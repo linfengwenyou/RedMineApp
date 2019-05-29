@@ -72,6 +72,25 @@ func bugFilterForModelS(_ content:String?) -> [BugModel] {
     guard let content = content else {  // 如果没有配置就直接回退处理
         return models
     }
+    // 只要bugid和名字
+    let statuPattern = "(?<=<td class=\"status\">).*(?=</td>)"
+    
+    let regularStatus = try? NSRegularExpression.init(pattern: statuPattern, options: [])
+    guard let statusResults = regularStatus?.matches(in: content, options: .init(rawValue: 0), range: NSMakeRange(0, content.count)) else {
+        return models;
+    }
+    
+    if statusResults.count == 0 {
+        return models;
+    }
+    var status = [String]()
+    for result in statusResults {
+        if let range = Range(result.range, in: content) {
+            let value = "\(content[range])"
+            status.append(value)
+        }
+    }
+    
     
     let pattern = "(?<=<td class=\"subject\"><a href=\"/issues/)\\d+.*(?=</a>)"
     let regular = try? NSRegularExpression.init(pattern: pattern , options: [])
@@ -80,6 +99,10 @@ func bugFilterForModelS(_ content:String?) -> [BugModel] {
         return models
     }
     
+    if results.count != statusResults.count {
+        print("数据解析不匹配，请查看数据验证");
+        return models;
+    }
     
     for result in results {
         if let range = Range(result.range, in: content) {
@@ -89,7 +112,13 @@ func bugFilterForModelS(_ content:String?) -> [BugModel] {
         }
     }
     
-    return models
+    var finalModel = [BugModel]()
+    for (index, var item) in models.enumerated() {
+        item.bugState = status[index]
+        finalModel.append(item)
+    }
+    
+    return finalModel
     
 }
 
@@ -102,6 +131,6 @@ private func bugDetailFilter(_ content:String) -> BugModel {
     print("bug信息",content)
     
     let tmpArr = content.components(separatedBy: "\">")
-    return BugModel.init(bugId: (tmpArr.first ?? "--"), bugTitle: (tmpArr.last ?? "--"))
+    return BugModel.init(bugId: (tmpArr.first ?? "--"), bugTitle: (tmpArr.last ?? "--"), bugState: "--")
     
 }

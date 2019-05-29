@@ -11,4 +11,5 @@ import Foundation
 struct BugModel {
     var bugId:String
     var bugTitle:String
+    var bugState:String
 }

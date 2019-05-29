@@ -87,6 +87,8 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
             return model?.bugId
         } else if identifier == "desc" {
             return model?.bugTitle
+        } else if identifier == "statu" {
+            return model?.bugState
         }
         return nil
     }
