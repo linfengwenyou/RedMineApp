@@ -59,8 +59,8 @@ class NetManager {
 }
 
 enum APIEnumber:String {
-    case main = "http://192.168.1.241:30001/"
-    case login = "http://192.168.1.241:30001/login"
-    case myPage = "http://192.168.1.241:30001/my/page"
+    case main = "http://192.168.1.236:30001/"
+    case login = "http://192.168.1.236:30001/login"
+    case myPage = "http://192.168.1.236:30001/my/page"
     case queryAll = ""
 }
